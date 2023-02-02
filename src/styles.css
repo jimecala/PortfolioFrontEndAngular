@@ -1,1 +1,80 @@
-/* You can add global styles to this file, and also import other style files */
+/*PALETA
+selva: 004921
+naranja-agria: FF4F00
+desierto: FB8D22
+cielito-lindo: FFC2AD
+chela: FFF0E0*/
+
+.bg-selva {
+    background-color: #004921;
+}
+  
+.nav-link {
+    color: white;
+}
+
+.navbar-nav {
+    --bs-nav-link-hover-color: #FFC2AD;
+}
+  
+section.banner{
+    background-image: linear-gradient(
+      rgba(0,0,0,0),
+      rgba(0,0,0,0.9)
+      ), url(assets/img/Banner2.png);
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    position:relative;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    -msn-background-size:cover;
+}
+  
+h1.intro {
+    padding-top: 22%;
+}
+  
+.titulo {
+    position: absolute;
+    font-family: "Libre Baskerville", serif;
+    bottom: 30px;
+    right: 30px;
+    text-align: right;
+    color: #FFF0E0; 
+}
+  
+.img-fluid {
+    max-width: 100%;
+    height: 200px;
+    
+}
+  
+.perfil-bg {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    filter: blur(8px);
+}
+  
+.perfil {
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    background-color: #FFF0E0;
+    border: 2px solid #004921;
+    border-radius: .375rem;
+    padding: .25rem;
+}
+  
+h2, h3 {
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+}
+  
+p, h6 {
+    font-family: 'Inter', sans-serif;
+}
