@@ -1,0 +1,16 @@
+<!--Experiencia-->
+<section>
+    <div class="container">
+      <h2>Experiencia</h2>
+      <ul class="items-list">
+        <li *ngFor="let experience of experienceList">
+          <div>
+            <h3>{{experience.company}}</h3>
+            <p>{{experience.position}}</p>
+            <p><time>{{experience.start}}</time> - <time>{{experience.end}}</time></p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+</section>

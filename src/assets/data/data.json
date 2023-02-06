@@ -1,0 +1,32 @@
+{
+    "name": "Jimena Calachi",
+    "bannerimg": "assets/img/Banner2.png",
+    "position": "Desarrollador Full Stack Jr.",
+    "company": {
+        "name": "",
+        "img": "",
+        "url": "#"
+    },
+    "school": {
+        "name": "",
+        "img": "",
+        "url": "#"
+    },
+    "location": "Jujuy, Argentina",
+    "introduction": "lorem ipsum",
+    "experience": [{
+        "company":"Senado de la Nación Argentina",
+        "position":"Asesora",
+        "start":"2015",
+        "end":"2015"
+        },
+        {"company":"Rovella Carranza S.A.",
+        "position":"Abogada Jr.",
+        "start":"2017",
+        "end":"2017"
+        }
+    ],
+    "education": "",
+    "skills": "",
+    "projects": ""
+}

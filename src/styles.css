@@ -17,11 +17,11 @@ chela: FFF0E0*/
     --bs-nav-link-hover-color: #FFC2AD;
 }
   
-section.banner{
+/*section.banner{
     background-image: linear-gradient(
       rgba(0,0,0,0),
       rgba(0,0,0,0.9)
-      ), url(assets/img/Banner2.png);
+      ), url(assets/img/banner2.png);
     width: 100%;
     height: 60vh;
     background-repeat: no-repeat;
@@ -31,7 +31,7 @@ section.banner{
     -moz-background-size:cover;
     -o-background-size:cover;
     -msn-background-size:cover;
-}
+}*/
   
 h1.intro {
     padding-top: 22%;
@@ -72,9 +72,16 @@ h1.intro {
   
 h2, h3 {
     font-family: 'Libre Baskerville', serif;
+}
+
+h2 {
     text-align: center;
 }
   
 p, h6 {
     font-family: 'Inter', sans-serif;
+}
+
+time {
+    font-style: italic;
 }
