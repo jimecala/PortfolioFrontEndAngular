@@ -1,0 +1,100 @@
+<!--<div class="modal fade" id="addSkillModal" tabindex="-1" ria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva habilidad</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="clean()"></button>
+            </div>
+
+            <form [formGroup]="form" (ngSubmit)="form.valid && onCreate($event)" name="skillsForm">
+                <div class="mb-3">
+                    <label for="skillsName" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="skillsName" placeholder="Ingrese nombre de la habilidad"
+                        formControlName="name" [(ngModel)]="name"
+                        [ngClass]="{'is-invalid': Name?.errors && Name?.touched,'is-valid': !Name?.errors && Name?.touched}">
+                    <div *ngIf="Name?.errors && Name?.touched">
+                        <p *ngIf="Name?.hasError('required')" class="text-danger">
+                            El campo <i>Nombre</i> no puede estar en blanco.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="skillsLevel" class="form-label">Nivel</label>
+                    <input type="number" min="0" max="100" id="skillsLevel" class="form-control"
+                        formControlName="skillLevel" [(ngModel)]="skillLevel"
+                        placeholder="Ingrese un número entre 0 y 100"
+                        [ngClass]="{'is-invalid': SkillLevel?.errors && SkillLevel?.touched,'is-valid': !SkillLevel?.errors && SkillLevel?.touched}">
+                    <div *ngIf="SkillLevel?.errors && SkillLevel?.touched">
+                        <p *ngIf="SkillLevel?.hasError('required')" class="text-danger">
+                            El campo <i>Nivel</i> no puede estar en blanco.
+                        </p>
+                        <p *ngIf="SkillLevel?.hasError('min')" class="text-danger">
+                            El nivel mínimo es 0.
+                        </p>
+                        <p *ngIf="SkillLevel?.hasError('max')" class="text-danger">
+                            El nivel máximo es 100.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-ligth">Limpiar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>-->
+
+<!-- Modal -->
+<div class="modal fade" id="addSkillModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva habiliadd</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="clean()"></button>
+            </div>
+            <form [formGroup]="form" (ngSubmit)="onCreate" name="skillsForm">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="skillsName" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" placeholder="Ingrese nombre de la habilidad"
+                            formControlName="name" [(ngModel)]="name"
+                            [ngClass]="{'is-invalid': Name?.errors && Name?.touched,'is-valid': !Name?.errors && Name?.touched}">
+                        <div *ngIf="Name?.errors && Name?.touched">
+                            <p *ngIf="Name?.hasError('required')" class="text-danger">
+                                El campo <i>Nombre</i> no puede estar en blanco.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="skillsLevel" class="form-label">Nivel</label>
+                        <input type="number" min="0" max="100" id="skillsLevel" class="form-control"
+                            formControlName="skillLevel" [(ngModel)]="skillLevel"
+                            placeholder="Ingrese un número entre 0 y 100"
+                            [ngClass]="{'is-invalid': SkillLevel?.errors && SkillLevel?.touched,'is-valid': !SkillLevel?.errors && SkillLevel?.touched}">
+                        <div *ngIf="SkillLevel?.errors && SkillLevel?.touched">
+                            <p *ngIf="SkillLevel?.hasError('required')" class="text-danger">
+                                El campo <i>Nivel</i> no puede estar en blanco.
+                            </p>
+                            <p *ngIf="SkillLevel?.hasError('min')" class="text-danger">
+                                El nivel mínimo es 0.
+                            </p>
+                            <p *ngIf="SkillLevel?.hasError('max')" class="text-danger">
+                                El nivel máximo es 100.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" (click)="onCreate">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>

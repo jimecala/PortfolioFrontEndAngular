@@ -1,20 +1,21 @@
 import { Component } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
+import { PersonaService } from 'src/app/services/persona.service';
 
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.css']
 })
-export class BannerComponent {
-  miPortfolio: any;
 
-  constructor(private portfolioData:PortfolioService) {}
+export class BannerComponent {
+  persona: any;
+
+  constructor(private personaService:PersonaService) {}
 
   ngOnInit(): void {
-    this.portfolioData.getData().subscribe(data =>{
-      console.log(data);
-      this.miPortfolio=data;
+    this.personaService.getData().subscribe(data =>{
+      //console.log("Datos Personales" + JSON.stringify(data));
+      this.persona=data[0];
     });
   }
 
