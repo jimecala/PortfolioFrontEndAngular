@@ -7,7 +7,7 @@ import { Education } from '../models/education';
   providedIn: 'root'
 })
 export class EducationService {
-  url:string="https://portfoliomjca.onrender.com/api/education/";
+  url: string = "https://portfoliomjca.onrender.com/api/education/";
   /* url: string = "http://localhost:8080/api/education/"; */
 
   constructor(private http: HttpClient) { }
