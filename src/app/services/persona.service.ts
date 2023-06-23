@@ -6,20 +6,21 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PersonaService {
-  url:string="https://portfoliomjca.onrender.com/api/";
+  url: string = "https://portfoliomjca.onrender.com/api/persona/";
+  /* url: string = "http://localhost:8080/api/persona/"; */
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getData():Observable<any>{
-    return this.http.get<any>(this.url+`${"datos-personales"}`);
+  getData(): Observable<any> {
+    return this.http.get<any>(this.url);
   }
 
-  public detail(id: number):Observable<any>{
-    return this.http.get<any>(this.url+`${id}`);
+  public detail(id: number): Observable<any> {
+    return this.http.get<any>(this.url + `${id}`);
   }
 
-  public update(persona: any):Observable<any>{
-    return this.http.put<any>(this.url,persona);
+  public update(persona: any): Observable<any> {
+    return this.http.put<any>(this.url, persona);
   }
 
 }

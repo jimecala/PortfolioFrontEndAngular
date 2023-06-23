@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiURL: "https://portfoliomjca.onrender.com"
+    apiURL: "http://localhost:8080"
   };

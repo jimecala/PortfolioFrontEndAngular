@@ -1,11 +1,11 @@
 export class Skills {
-    id: any;
-    name : string;
-    skillLevel : number;
+    id?: any;
+    name: string;
+    percentage: number;
 
-    constructor(name: string, skillLevel: number){
+    constructor(name: string, percentage: number) {
         this.name = name;
-        this.skillLevel = skillLevel;   
+        this.percentage = percentage;
     }
 
 }

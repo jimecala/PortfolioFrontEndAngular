@@ -1,0 +1,23 @@
+h3 {
+    color: #37424A;
+    font: 2em 'Yeseva One', Georgia, serif;
+    text-transform: lowercase;
+    letter-spacing: -0.04em;
+}
+
+label,
+.btn {
+    font: 300 0.9em 'Merriweather Sans', Helvetica, sans-serif;
+}
+
+label {
+    color: #37424A;
+}
+
+.form-control {
+    font-size: 0.8rem;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}

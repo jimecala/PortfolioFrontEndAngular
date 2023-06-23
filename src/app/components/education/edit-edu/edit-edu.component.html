@@ -1,0 +1,32 @@
+<!--Edit Education-->
+<div class="row">
+    <div class="container-fluid text-box col-md-10">
+        <hr class="col-md-12">
+        <div class="text">
+            <h2>Editar Educación</h2>
+            <form class="col-md-4" [formGroup]="form" (ngSubmit)="onSave($event)" novalidate #f="ngForm">
+                <input type="hidden" class="form-control" id="eduId" formControlName="id">
+                <div>
+                    <label for="institution">Institución</label>
+                    <input type="text" class="form-control" id="institution" formControlName="institution" required>
+                </div>
+                <div>
+                    <label for="degree">Certificación</label>
+                    <input type="text" class="form-control" id="degree" formControlName="degree" required>
+                </div>
+                <div>
+                    <label for="endDate">Año</label>
+                    <input type="date" class="form-control" id="endDate" formControlName="endDate" required>
+                </div>
+                <div class="btn-group float-end" style="margin-top: 15px;">
+                    <button type="button" class="btn btn-light" routerLink="">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn btn-dark">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,7 +1,46 @@
 <!--Educación-->
-<section>
-    <div class="container">
-      <h2>Educación</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores nemo consequuntur consequatur recusandae necessitatibus architecto id nesciunt ducimus tempore est repudiandae quidem totam fugiat ea, iusto magni perferendis earum quibusdam?</p>
+<div class="row">
+  <div class="container-fluid text-box col-md-10">
+    <img alt="Bee without stinger" class="beewithoutstinger beesvg"
+      src="https://femmebot.github.io/google-type/images/the-bee-and-jupiter/bee_fill.svg">
+    <hr class="col-md-12">
+    <div class="text">
+      <div class="col-md-6">
+        <h2>Educación</h2>
+        <!-- LOGIN -->
+        <!-- <button type="button" *ngIf="isLogged" class="btn float-end" data-bs-toggle="modal"
+          data-bs-target="#newEduModal"><i class="fa-solid fa-plus"></i></button> -->
+        <button type="button" class="btn float-end" data-bs-toggle="modal" data-bs-target="#newEduModal"><i
+            class="fa-solid fa-plus"></i></button>
+      </div>
+
+      <div class="col-md-5">
+        <table class="table align-middle mb-0">
+          <tbody>
+            <tr *ngFor="let edu of educ">
+              <td class="d-flex align-items-center">
+                <div>
+                  <!-- <p class="fw-bold mb-1">Institution</p> -->
+                  <h3>{{edu.institution}}</h3>
+                  <p class="fw-normal mb-1">{{edu.degree}}</p>
+                </div>
+              </td>
+              <td>
+                <span class="badge badge-warning rounded-pill d-inline">{{edu.endDate | date: 'yyyy':"UTC"}}</span>
+              </td>
+              <td class="btnpair">
+                <div class="d-flex justify-content-end">
+                  <button type=" button" class="btn" routerLink="/edit-edu/{{edu.id}}"><i
+                      class="fa-solid fa-pencil"></i></button>
+                  <button type="button" class="btn"><i class="fa-solid fa-trash-can"
+                      (click)="delete(edu.id)"></i></button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    </section>
+  </div>
+</div>
+<app-new-edu></app-new-edu>

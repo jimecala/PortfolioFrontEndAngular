@@ -1,16 +1,35 @@
 <!--Experiencia-->
-<section>
-    <div class="container">
-      <h2>Experiencia</h2>
-      <ul class="items-list">
-        <li *ngFor="let experience of experienceList">
-          <div>
-            <h3>{{experience.company}}</h3>
-            <p>{{experience.position}}</p>
-            <p><time>{{experience.start}}</time> - <time>{{experience.end}}</time></p>
-          </div>
-        </li>
+<div class="row">
+  <div class="container-fluid text-box col-md-10">
+    <hr class="col-md-12">
+    <div class="text">
+      <div class="col-md-6">
+        <h2>Experiencia</h2>
+        <!-- LOGIN -->
+        <!-- <button type="button" *ngIf="isLogged" class="btn float-end" data-bs-toggle="modal"
+          data-bs-target="#newExpModal"><i class="fa-solid fa-plus"></i></button> -->
+        <button type="button" class="btn float-end" data-bs-toggle="modal" data-bs-target="#newExpModal"><i
+            class="fa-solid fa-plus"></i></button>
+      </div>
 
-      </ul>
+      <div class="position-relative col-md-5">
+        <ul class="list-group list-group-light mb-4" *ngFor="let exp of exps">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <div class="ms-3">
+                <h3>{{exp.employer}}</h3>
+                <h4>{{exp.position}}</h4>
+                <p class="text-muted mb-0">{{exp.startDate | date: 'MMMM yyyy':"UTC"}} -
+                  {{exp.endDate | date: 'MMMM yyyy':"UTC"}}</p>
+                <button type="button" class="btn position-absolute top-0 end-0" style="margin: 0px 35px;"
+                  routerLink="/edit-exp/{{exp.id}}"><i class="fa-solid fa-pencil"></i></button>
+                <button type="button" class="btn position-absolute top-0 end-0"><i class="fa-solid fa-trash-can"
+                    (click)="delete(exp.id)"></i></button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-</section>
+  </div>
+  <app-new-exp></app-new-exp>

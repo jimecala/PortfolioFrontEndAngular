@@ -10,44 +10,53 @@ import { SkillsService } from 'src/app/services/skills.service';
   styleUrls: ['./edit-skills.component.css']
 })
 export class EditSkillsComponent {
+  skills: Skills = new Skills('', 0);
   form: FormGroup;
-  skills:Skills=new Skills('',0);
-  constructor(private formBuilder:FormBuilder, 
-              private skillsService:SkillsService,
-              private activatedRoute:ActivatedRoute,
-              private route:Router) { 
+
+  constructor(private formBuilder: FormBuilder, private skillsServ: SkillsService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.form = formBuilder.group(
       {
-        id:[''],
-        name:['',[Validators.required]],
-        skillLevel:['',[Validators.required, Validators.min(0), Validators.max(100)]]
+        id: [''],
+        name: ['', [Validators.required, Validators.min(0), Validators.max(100)]],
+        percentage: ['', [Validators.required, Validators.min(0), Validators.max(100)]],
       }
     )
   }
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
-    this.skillsService.detail(id).subscribe(data =>{
+    this.skillsServ.search(id).subscribe(data => {
       this.skills = data;
-    });    
+      this.form.patchValue({
+        id: this.skills.id,
+        name: this.skills.name,
+        percentage: this.skills.percentage
+      });
+    });
+  };
+
+
+  //Validaciones
+  get Name() {
+    return this.form.get('name');
   }
 
-  get Name() {
-     return this.form.get('name');
-   }
- 
-   get SkillLevel() {
-     return this.form.get('skillLevel');
-   } 
+  get Percentage() {
+    return this.form.get('percentage');
+  }
 
-   onUpdate(event:Event): void{
+  onSave(event: Event): void {
     event.preventDefault;
-    this.skillsService.editSkill(this.form.value).subscribe(data=>{
-      this.route.navigate(['']);
+    this.skillsServ.save(this.form.value).subscribe(data => {
+      this.router.navigate(['']);
     }, err => {
-      alert("ERROR");
+      alert("Error");
     })
   }
 
+
+  clean(): void {
+    this.form.reset();
+  }
 
 }

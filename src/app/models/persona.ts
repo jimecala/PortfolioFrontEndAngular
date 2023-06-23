@@ -1,16 +1,21 @@
 export class Persona {
     id: any;
-    name : string;
-    position : string;
-    introduction : string;
-    img : string;
-    email : string;
+    name: string;
+    lastName: string;
+    position: string;
+    email: string;
+    aboutMe: string;
+    imgProfile: string;
+    imgBanner: string;
 
-    constructor(name: string,position: string,introduction: string,img: string,email: string){
-        this.name = name;   
+
+    constructor(name: string, lastName: string, position: string, aboutMe: string, email: string, imgProfile: string, imgBanner: string) {
+        this.name = name;
+        this.lastName = lastName;
         this.position = position;
-        this.introduction = introduction;
-        this.img = img;
         this.email = email;
+        this.aboutMe = aboutMe;
+        this.imgProfile = imgProfile;
+        this.imgBanner = imgBanner;
     }
 }

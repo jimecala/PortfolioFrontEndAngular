@@ -5,20 +5,34 @@ import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { BannerComponent } from './components/banner/banner.component';
-import { IntroductionComponent } from './components/introduction/introduction.component';
+import { NavBarComponent } from './components/header/nav-bar/nav-bar.component';
+import { BannerComponent } from './components/header/banner/banner.component';
+import { HeaderComponent } from './components/header/header.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EducationComponent } from './components/education/education.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-//import { PortfolioService } from './services/portfolio.service';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
-//import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { CommonModule } from "@angular/common";
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { FooterComponent } from './components/footer/footer.component';
+//import { PortfolioService } from './services/portfolio.service';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { PruebasComponent } from './components/pruebas/pruebas.component';
+import { PruebasModalComponent } from './components/pruebas/pruebas-modal/pruebas-modal.component';
+import { FormsModule } from '@angular/forms';
+import { NewEduComponent } from './components/education/new-edu/new-edu.component';
+import { NewExpComponent } from './components/experience/new-exp/new-exp.component';
+import { NewProjComponent } from './components/projects/new-proj/new-proj.component';
+import { NewSklComponent } from './components/skills/new-skl/new-skl.component';
+import { EditEduComponent } from './components/education/edit-edu/edit-edu.component';
+import { EditExpComponent } from './components/experience/edit-exp/edit-exp.component';
+import { EditProjComponent } from './components/projects/edit-proj/edit-proj.component';
 import { EditSkillsComponent } from './components/skills/edit-skills/edit-skills.component';
-import { AddSkillsComponent } from './components/skills/add-skills/add-skills.component';
+
+
 
 
 @NgModule({
@@ -26,15 +40,26 @@ import { AddSkillsComponent } from './components/skills/add-skills/add-skills.co
     AppComponent,
     NavBarComponent,
     BannerComponent,
-    IntroductionComponent,
+    HeaderComponent,
     ExperienceComponent,
     EducationComponent,
     SkillsComponent,
     ProjectsComponent,
     LoginComponent,
-    EditSkillsComponent,
-    AddSkillsComponent,
-    //PortfolioComponent
+    AboutMeComponent,
+    FooterComponent,
+    PortfolioComponent,
+    PruebasComponent,
+    PruebasModalComponent,
+    NewEduComponent,
+    NewExpComponent,
+    NewSklComponent,
+    NewProjComponent,
+    EditEduComponent,
+    EditExpComponent,
+    EditProjComponent,
+    EditSkillsComponent
+
   ],
   imports: [
     BrowserModule,
@@ -42,8 +67,10 @@ import { AddSkillsComponent } from './components/skills/add-skills/add-skills.co
     FontAwesomeModule,
     HttpClientModule,
     ReactiveFormsModule,
-    CommonModule
-    
+    CommonModule,
+    NgCircleProgressModule.forRoot({}),
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

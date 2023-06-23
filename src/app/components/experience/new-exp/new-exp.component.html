@@ -1,0 +1,39 @@
+<div class="modal fade" id="newExpModal" tabindex="-1" aria-labelledby="newExpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="newExpModalLabel">Nueva Experiencia</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="clean()"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form" (ngSubmit)="onNew()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="employer">Empresa</label>
+                        <input type="text" class="form-control" id="employer" formControlName="employer" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="position">Posición</label>
+                        <input type="text" class="form-control" id="position" formControlName="position" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Desde</label>
+                        <input type="date" class="form-control" id="startDate" formControlName="startDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate">Hasta</label>
+                        <input type="date" class="form-control" id="endDate" formControlName="endDate" required>
+                    </div>
+                    <div class="btn-group float-end" style="margin-top: 15px;">
+                        <button type="reset" class="btn btn-light">
+                            Limpiar
+                        </button>
+                        <button type="submit" class="btn btn-dark">
+                            Guardar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

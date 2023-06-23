@@ -1,0 +1,33 @@
+.container {
+    position: relative;
+    padding: 10px 0 80px 0;
+    background-color: #F2D653;
+    height: 100vh;
+    min-width: 100vw;
+    text-align: center;
+}
+
+hr {
+    border-top: 1px dashed #37424A;
+    border-bottom: none;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font: 5em 'Yeseva One', Georgia, serif;
+    color: #37424A;
+    text-transform: lowercase;
+    width: 456px;
+    letter-spacing: -0.04em;
+    line-height: 1.1em;
+    vertical-align: top;
+}
+
+.enter {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

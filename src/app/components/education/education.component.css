@@ -1,0 +1,76 @@
+.row {
+    background-color: #F2D653;
+    margin: auto;
+}
+
+.text-box {
+    padding: 80px 0 80px 0;
+    margin: 0 auto;
+}
+
+.beewithoutstinger {
+    margin-bottom: 50px;
+}
+
+.beesvg {
+    display: block;
+    width: 120px;
+    text-align: center;
+    margin: auto;
+}
+
+hr {
+    border-top: 1px dashed #37424A;
+    border-bottom: none;
+    margin-bottom: 20px;
+}
+
+.text {
+    display: flex;
+}
+
+.table> :not(caption)>*>* {
+    border-bottom-width: 0px;
+}
+
+h2 {
+    font: 5em 'Yeseva One', Georgia, serif;
+    color: #37424A;
+    text-transform: lowercase;
+    text-align: right;
+    letter-spacing: -0.04em;
+    line-height: 1.1em;
+    vertical-align: top;
+}
+
+h3,
+p {
+    text-align: justify;
+    color: #37424A;
+    margin: 0 0 20px 25px;
+}
+
+h3 {
+    font: 1.1em 'Merriweather Sans', Helvetica, sans-serif;
+    font-weight: 600;
+    display: inline;
+}
+
+p {
+    font: 300 0.8em/1.625em 'Merriweather Sans', Helvetica, sans-serif;
+}
+
+
+
+.d-flex.justify-content-end {
+    justify-content: flex-end;
+}
+
+.badge-warning {
+    background-color: #fbf0da;
+    color: #73510d;
+}
+
+.btnpair {
+    padding-right: 0px;
+}

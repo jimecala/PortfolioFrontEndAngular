@@ -1,0 +1,35 @@
+<div class="modal fade" id="newProjModal" tabindex="-1" aria-labelledby="newProjModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="newProjModalLabel">Nuevo Proyecto</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="clean()"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form" (ngSubmit)="onNew()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="name">Proyecto</label>
+                        <input type="text" class="form-control" id="name" formControlName="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Descripción</label>
+                        <input type="text" class="form-control" id="description" formControlName="description" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imgProject">URL Imagen</label>
+                        <input type="url" class="form-control" id="imgProject" formControlName="imgProject" required>
+                    </div>
+                    <div class="btn-group float-end" style="margin-top: 15px;">
+                        <button type="reset" class="btn btn-light">
+                            Limpiar
+                        </button>
+                        <button type="submit" class="btn btn-dark">
+                            Guardar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

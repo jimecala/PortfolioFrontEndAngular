@@ -1,0 +1,35 @@
+<div class="modal fade" id="newEduModal" tabindex="-1" aria-labelledby="newEduModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="newEduModalLabel">Nueva Educación</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="clean()"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form" (ngSubmit)="onNew()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="institution">Institución</label>
+                        <input type="text" class="form-control" id="institution" formControlName="institution" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="degree">Certificación</label>
+                        <input type="text" class="form-control" id="degree" formControlName="degree" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate">Año</label>
+                        <input type="date" class="form-control" id="endDate" formControlName="endDate" required>
+                    </div>
+                    <div class="btn-group float-end" style="margin-top: 15px;">
+                        <button type="reset" class="btn btn-light">
+                            Limpiar
+                        </button>
+                        <button type="submit" class="btn btn-dark">
+                            Guardar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

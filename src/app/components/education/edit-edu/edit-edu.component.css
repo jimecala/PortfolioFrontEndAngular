@@ -1,0 +1,35 @@
+.row {
+    background-color: #F2D653;
+    margin: auto;
+    height: 100vh;
+}
+
+hr {
+    border-top: 1px dashed #37424A;
+    border-bottom: none;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font: 3.5em 'Yeseva One', Georgia, serif;
+    color: #37424A;
+    text-transform: lowercase;
+    text-align: center;
+    letter-spacing: -0.04em;
+    line-height: 1.1em;
+}
+
+form {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+}
+
+label,
+.btn {
+    font: 300 0.9em 'Merriweather Sans', Helvetica, sans-serif;
+}
+
+label {
+    color: #37424A;
+}

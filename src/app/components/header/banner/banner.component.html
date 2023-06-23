@@ -1,0 +1,16 @@
+<!--Banner-->
+<div class="row" style="margin: auto">
+  <section
+    [style.background-image]="'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('+ persona.imgBanner +')'">
+
+    <div class="titulo">
+      <h1 class="intro">{{persona.name}} {{persona.lastName}}</h1>
+      <hr class="solid">
+      <h5 class="intro"><i>{{persona.position}}</i></h5>
+    </div>
+    <div class="d-flex float-end">
+      <button type="button" class="btn" routerLink="editBanner/{{persona.id}}"><i
+          class="fa-solid fa-pencil"></i></button>
+    </div>
+  </section>
+</div>

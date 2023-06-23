@@ -1,0 +1,62 @@
+/* CSS CARDS */
+.row {
+    background-color: #F2D653;
+    margin: auto;
+}
+
+.text-box {
+    padding: 0px 0 80px 0;
+    margin: 0 auto;
+}
+
+hr {
+    border-top: 1px dashed #37424A;
+    border-bottom: none;
+    margin-bottom: 20px;
+}
+
+.text {
+    display: flex;
+}
+
+
+h2 {
+    font: 5em 'Yeseva One', Georgia, serif;
+    color: #37424A;
+    text-transform: lowercase;
+    text-align: right;
+    letter-spacing: -0.04em;
+    line-height: 1.1em;
+    vertical-align: top;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    text-align: justify;
+    font: 300 0.8em/1.625em 'Merriweather Sans', Helvetica, sans-serif;
+    color: #37424A;
+}
+
+h3 {
+    color: #37424A;
+    font: 1.1em 'Merriweather Sans', Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover
+}
+
+.card {
+    margin-left: 15px;
+    margin-bottom: 20px;
+    --bs-card-border-width: 0px;
+}

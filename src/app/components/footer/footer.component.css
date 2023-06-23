@@ -1,0 +1,55 @@
+.row {
+    background-color: #F2D653;
+    margin: auto;
+}
+
+.text-box {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.beesvg {
+    display: block;
+    width: 120px;
+    text-align: center;
+    margin: auto;
+}
+
+hr {
+    border-top: 1px dashed #37424A;
+    border-bottom: none;
+    margin-bottom: 20px;
+}
+
+h3 {
+    text-align: center;
+    color: #37424A;
+    font: 1.2em 'Merriweather', Times New Roman, serif;
+    font-weight: 400;
+    margin: 40px 0 0 0;
+    font-style: italic;
+}
+
+p {
+    text-align: center;
+    font: 300 0.8em/1.625em 'Merriweather Sans', Helvetica, sans-serif;
+    color: #37424A;
+    padding-top: 1.2em;
+}
+
+
+/*.row {
+    background-color: #F2D653;
+}
+
+footer {
+    color: #fefefe;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+}*/
